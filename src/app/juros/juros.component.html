@@ -9,10 +9,12 @@
 <h4>R${{ vp * (1 + (j / 100) * n) }}</h4>
 
 <h3>Juros compostos</h3>
-<table border="1">
+<table>
+  <td>N</td>
   <tr>
-    <td>n</td>
-    <td>Juros simples</td>
-    <td>Juros compostos</td>
+    {{
+      getJuros()
+    }}
   </tr>
+  <td>Juros Simples</td>
 </table>
