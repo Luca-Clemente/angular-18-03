@@ -6,15 +6,15 @@
 <div>Período (em meses):</div>
 <input type="number" step="1" [(ngModel)]="n" />
 <h3>Valor futuro:</h3>
-<h4>R${{ vp * (1 + (j / 100) * n) }}</h4>
-
-<h3>Juros compostos</h3>
-<table>
-  <td>N</td>
-  <tr>
-    {{
-      getJuros()
-    }}
-  </tr>
-  <td>Juros Simples</td>
+<table border="1">
+<tr>
+  <th>N</th>
+  <th>Juros simples</th>
+  <th>Juros Compostos</th>
+</tr>
+<tr>
+  <td>{{n}}</td>
+  <td>{{getJuros()}}</td>
+  <td>{{getJurosCompostos()}}</td>
+</tr>
 </table>
